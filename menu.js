@@ -12,3 +12,9 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth <= 768) {
+        let dropdowns = document.querySelectorAll(".dropdown-content");
+        dropdowns.forEach(dropdown => dropdown.remove()); // Διαγράφει τα dropdown στο κινητό
+    }
+});
