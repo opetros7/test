@@ -716,6 +716,7 @@ body.dark-mode .player-container {
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    padding: 10px 0;
 }
 
 /* Ενεργό μενού (εμφάνιση) */
@@ -733,6 +734,10 @@ body.dark-mode .player-container {
     border: none;
     color: white;
     padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
 }
 
 /* Εφέ ομαλής εμφάνισης */
@@ -758,7 +763,9 @@ body.dark-mode .player-container {
     }
 
     .nav-menu {
-        display: flex;
+        display: none;
     }
+}
+
 }
 
