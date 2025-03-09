@@ -704,63 +704,61 @@ body.dark-mode .player-container {
     }
 }
 
-/* Απόκρυψη του μενού μόνο σε κινητά */
-@media (max-width: 768px) {
-  .nav-menu {
+/* Απόκρυψη μενού στο κινητό */
+.nav-menu {
     display: none;
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    background: #111;
+    background: #222;
+    flex-direction: column;
     text-align: center;
-    padding: 10px 0;
-  }
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
 
-  .nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+/* Ενεργό μενού (εμφάνιση) */
+.nav-menu.active {
+    display: flex;
+    animation: slideDown 0.3s ease-in-out;
+}
 
-  .nav-menu ul li {
-    padding: 10px;
-  }
-
-  .nav-menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-
-  /* Εμφάνιση του menu όταν ανοίγει */
-  .nav-menu.active {
-    display: block;
-  }
-
-  /* Εμφάνιση του κουμπιού hamburger μόνο σε κινητά */
-  .menu-toggle {
-    display: block;
+/* Κουμπί μενού */
+.menu-button {
+    display: none; /* Μόνο στο κινητό */
+    cursor: pointer;
     font-size: 24px;
     background: none;
     border: none;
     color: white;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 15px;
-  }
+    padding: 10px;
 }
 
-/* Σε μεγαλύτερες οθόνες, δείξε κανονικά το menu και κρύψε το κουμπί */
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
+/* Εφέ ομαλής εμφάνισης */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-  .nav-menu {
-    display: block;
-    position: static;
-  }
+/* Ενεργοποίηση στο κινητό */
+@media screen and (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .site-header nav {
+        display: none; /* Κρύβει το παλιό μενού */
+    }
+
+    .nav-menu {
+        display: flex;
+    }
 }
 
