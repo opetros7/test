@@ -875,3 +875,24 @@ body.dark-mode .player-container {
         pointer-events: none; /* Απενεργοποιεί τα κλικ */
     }
 }
+
+.site-header {
+    background: #111; /* Ή βάλε το αρχικό σου χρώμα */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Επιστροφή στα σωστά χρώματα όταν είναι ενεργό το menu */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        background: #111; /* Ίδιο με το header */
+    }
+}
