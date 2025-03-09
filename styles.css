@@ -724,7 +724,7 @@ body.dark-mode .player-container {
 
 .nav-menu ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 18px;
     padding: 10px;
 }
@@ -748,7 +748,7 @@ body.dark-mode .player-container {
     font-size: 24px;
     background: none;
     border: none;
-    color: white;
+    color: black;
     cursor: pointer;
     padding: 10px;
     position: absolute;
