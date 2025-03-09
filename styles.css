@@ -875,3 +875,13 @@ body.dark-mode .player-container {
         pointer-events: none; /* Απενεργοποιεί τα κλικ */
     }
 }
+body.live-page main {
+    padding: 20px; /* Ίδιο padding και στις δύο λειτουργίες */
+}
+
+body.dark-mode.live-page main {
+    background: #252525 !important;
+    color: white !important;
+    border-radius: 10px;
+    /* Αφαίρεσε το padding αν είναι ίδιο */
+}
