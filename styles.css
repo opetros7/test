@@ -870,7 +870,8 @@ body.dark-mode .player-container {
 }
 
 @media screen and (max-width: 768px) {
-    .dropdown:hover .dropdown-content {
-        display: none !important; /* Απενεργοποιεί το dropdown */
+    .dropdown .dropdown-content {
+        display: none !important; /* Κρύβει το dropdown */
+        pointer-events: none; /* Απενεργοποιεί τα κλικ */
     }
 }
