@@ -868,3 +868,9 @@ body.dark-mode .player-container {
         display: flex;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .dropdown:hover .dropdown-content {
+        display: none !important; /* Απενεργοποιεί το dropdown */
+    }
+}
